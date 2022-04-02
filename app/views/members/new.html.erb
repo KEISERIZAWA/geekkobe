@@ -1,0 +1,17 @@
+<h1>新規投稿</h1>
+<div class="new-container">
+<%= form_for @member do |p| %>
+    <div class="field">
+    <%= p.label :名前 %>
+    <%= p.text_field :name, :size => 30 %>
+    <%= p.label :大学・学部 %>
+    <%= p.text_field :profile, :size => 30 %>
+    <%= p.label :メンター %>
+    <%= p.text_field :mentor, :size => 30 %>
+    <%= p.label :学年 %>
+    <%= p.text_field :grade %>
+    </div>
+    <%= p.submit "投稿" %>
+<% end %>
+<%= link_to "投稿一覧", members_path %>
+</div>

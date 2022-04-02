@@ -1,0 +1,12 @@
+<h1>投稿一覧</h1>
+<div class="all-container">
+    <% @members.each do |p| %>
+        <%= p.name %>
+        <%= p.profile %>
+        <%= p.mentor %>
+        <%= p.grade %>
+        <%= p.created_at %>
+        <%= link_to "詳細", member_path(p.id) %>
+    <% end %>
+</div>
+<%= link_to "新規投稿", new_member_path %>
